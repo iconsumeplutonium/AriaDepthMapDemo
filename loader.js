@@ -8,7 +8,6 @@ export async function loadDataFromFiles(file) {
     const pointCloudData = {
         positions: [],
         colors: [],
-        white: []
     };
 
 
@@ -22,7 +21,6 @@ export async function loadDataFromFiles(file) {
 
         pointCloudData.positions.push(Number(pointStr[0]), Number(pointStr[1]), Number(pointStr[2]));
         pointCloudData.colors.push(Number(rgbStr[0]) / 255, Number(rgbStr[1]) / 255, Number(rgbStr[2]) / 255);
-        pointCloudData.white.push(1, 1, 1);
     });
 
     return pointCloudData;
