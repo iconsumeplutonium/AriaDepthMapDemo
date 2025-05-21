@@ -91,7 +91,6 @@ function main() {
     // start rendering after all promises get resolved (so after all files have been loaded)
     Promise.all(loadPromises).then(() => {
         console.log("all point clouds loaded");
-        console.log(files)
         scene.add(files[selectedIndex].pointCloud);
 
         renderer.render(scene, camera);
