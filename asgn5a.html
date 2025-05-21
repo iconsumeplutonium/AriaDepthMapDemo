@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>asgn5a</title>
+		<link rel="shortcut icon" href="#"> <!-- to silence the stupid favicon not found error-->
+		<script type="importmap">
+				{
+				"imports": {
+					"three": "https://cdn.jsdelivr.net/npm/three@v0.176.0/build/three.module.js",
+					"three/addons/": "https://cdn.jsdelivr.net/npm/three@0.176.0/examples/jsm/"
+				}
+				}
+			</script>
+	</head>
+
+	<body>
+		<canvas id="webgl" width="900" height="450">
+			Please use the browser supporting "canvas".
+		</canvas>
+
+		<script type="module" src="PlayerController.js"></script>
+		<script type="module" src="asgn5a.js"></script>
+		<script type="module" src="loader.js"></script>
+
+
+		<p id="fpsCounter">FPS: </p>
+		<p id="speed">Speed: </p>
+		<div>
+			<div style="display: flex; flex-direction: row;">
+				<input id="testcloudCheckbox" type="checkbox" checked></input>
+				<p id="test">(1) testcloud</p>
+			</div>
+			<div style="display: flex; flex-direction: row;">
+				<input id="131checkBox" type="checkbox"></input>
+				<p id="131">(2) apt_seq131</p>
+			</div>
+			<div style="display: flex; flex-direction: row;">
+				<input id="136checkBox" type="checkbox"></input>
+				<p id="136">(3) apt_seq136</p>
+			</div>
+		</div>
+	</body>
+</html>
