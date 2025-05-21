@@ -35,13 +35,28 @@ const files = [
 
 
 function main() {
+    document.documentElement.style.height = '100vh';
+    document.body.style.height = '100vh';
+    document.body.style.margin = '0';
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.height = '100%';
+    document.body.style.height = '100%';
+    document.body.style.padding = '0';
+
     // renderer
     const canvas = document.querySelector("#webgl");
     renderer = new three.WebGLRenderer({ antialias: true, canvas });
+    renderer.setSize(window.innerWidth, window.innerHeight);
 
     // perpsective camera
     camera = new three.PerspectiveCamera(fov, aspect, near, far);
     camera.position.z = 2;
+
+    window.addEventListener('resize', function() {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+    })
 
     // scene
     scene = new three.Scene();
