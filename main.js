@@ -12,38 +12,14 @@ let renderer, scene, camera;
 let controls;
 
 let selectedIndex = 0;
-// const files = [
-//     {
-//         fileName: 'data/testcloud.txt',
-//         displayText: document.getElementById("test"),
-//         checkbox: document.getElementById("testcloudCheckbox"),
-//         pointCloud: NaN,
-//     },
-//     {
-//         fileName: 'data/apt-seq131.txt',
-//         displayText: document.getElementById("131"),
-//         checkbox: document.getElementById("131checkBox"),
-//         pointCloud: NaN,
-//     },
-//     {
-//         fileName: 'data/apt-seq136.txt',
-//         displayText: document.getElementById("136"),
-//         checkbox: document.getElementById("136checkBox"),
-//         pointCloud: NaN,
-//     },
-//     {
-//         fileName: 'data/myformat.txt',
-//         displayText: document.getElementById("da2"),
-//         checkbox: document.getElementById("da2box"),
-//         pointCloud: NaN,
-//     },
-// ]
 
 const inputFiles = [
     'data/testcloud.txt',
     'data/apt-seq131.txt',
     'data/apt-seq136.txt',
-    'data/myformat.txt',
+    'data/intrinsics1.txt',   // camera intrinsics
+    'data/intrinsics2.txt', // camera intrinsics slightly better
+    'data/manualprojection.txt',    // manual projection by terating (my code)
 ];
 let files = [];
 
